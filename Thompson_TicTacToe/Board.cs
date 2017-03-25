@@ -18,10 +18,22 @@ namespace Thompson_TicTacToe
             Reset();
         }
 
+
+
+
+
+
         public char[] PlayingBoard
         {
             get { return m_squares; }
         }
+
+
+
+
+
+
+
         public void Reset()
         {
             for (int i = 0; i < m_squares.Length; i++)
@@ -59,7 +71,7 @@ namespace Thompson_TicTacToe
                 return true;
             if (m_squares[1] == piece && m_squares[4] == piece && m_squares[7] == piece)
                 return true;
-            if (m_squares[2] == piece && m_squares[5] == piece && m_squares[9] == piece)
+            if (m_squares[2] == piece && m_squares[5] == piece && m_squares[8] == piece)
                 return true;
             //diagonal
             if (m_squares[0] == piece && m_squares[4] == piece && m_squares[8] == piece)
@@ -70,6 +82,10 @@ namespace Thompson_TicTacToe
             return false;
 
         }
+
+
+
+
         public bool IsFull()
         {
             bool full = true;
@@ -85,9 +101,12 @@ namespace Thompson_TicTacToe
             }
             return full;
         }
+
+
+
+
         public void ReceiveMove(char piece, int move)
         {
-
             m_squares[move] = piece;
         }
     }

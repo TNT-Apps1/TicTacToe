@@ -26,12 +26,16 @@ namespace Thompson_TicTacToe
             
             do
             {
-
+                int doLoopHolder = 0;
                 int move;
                 do
                 {   
                     DisplayBothGrids();
+                    if(doLoopHolder==0)
                     Console.WriteLine("Player {0} make your move 0-8=>", theplayers[current_player].Piece);
+                    if(doLoopHolder!=0)
+                        Console.WriteLine("The square you entered has already been taken.\nPlayer {0} make your move 0-8=>", theplayers[current_player].Piece);
+                    doLoopHolder++;
                     int.TryParse(Console.ReadLine(), out move);
                 } while (theboard.isLegalMove(move) == true);
 
@@ -45,10 +49,7 @@ namespace Thompson_TicTacToe
 
         }
 
-        bool isTie()
-        {
-            return false;
-        }
+        
 
         
 

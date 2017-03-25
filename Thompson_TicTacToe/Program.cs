@@ -19,8 +19,9 @@ namespace Thompson_TicTacToe
     {
         static void Main(string[] args)
         {
-
+            Info info1 = new Info();
             GameUI thegame = new GameUI();
+            info1.hello();
             thegame.Play(); //eventually become PlayAgain
 
             Console.ReadLine();
